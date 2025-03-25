@@ -174,3 +174,23 @@ console.log(student.id);
 let call = student.fullName();
 console.log(call);
 
+// java script delete method
+delete student.id;
+
+// java script support nested object
+myObject = {
+    name: "Jhon",
+    age: 30,
+    myCar:{
+        car1:"Ford",
+        car2:"BMW",
+        car3:"Fiat"
+    }
+}
+console.log("nested object here");
+console.log(myObject.name);
+console.log(myObject.age);
+console.log(myObject.myCar.car1);
+console.log(myObject.myCar.car2);
+console.log(myObject.myCar.car3);
+
