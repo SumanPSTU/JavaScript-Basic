@@ -1,16 +1,16 @@
 let x = "string";
 let y = "star";
-if(x>y){
+if (x > y) {
     console.log(x.toUpperCase());
-}else{
+} else {
     console.log(y)
 }
 
-let text = x+" "+y;
+let text = x + " " + y;
 console.log(text);
 
 let v = "what a nice day";
-v+=" also funny";
+v += " also funny";
 console.log(v);
 
 let a = 5 + 5;
@@ -27,9 +27,9 @@ console.log(d);
 let xx = true;
 let yy = false;
 
-if(x!=y){
+if (x != y) {
     console.log("x is not equal y");
-}else{
+} else {
     console.log("X is equal y");
 }
 
@@ -91,9 +91,9 @@ console.log(isTrue);
 
 // array in javascript
 
-let array = ["volvo","BMW","Toyota"];
+let array = ["volvo", "BMW", "Toyota"];
 array[1] = "Ferary";
-for(i in array){
+for (i in array) {
     console.log(array[i]);
 }
 
@@ -104,13 +104,39 @@ let person = {
     lname: "Das",
     age: 21,
     color: "Blue" // Ensure the 'color' property is defined correctly
-  };
-  
-  console.log(person.fname); // Outputs "sumon"
-  console.log(person.lname); // Outputs "Das"
-  console.log(person.age);   // Outputs 21
-  console.log(person.color); // Outputs "Blue"
+};
+
+console.log(person.fname); // Outputs "sumon"
+console.log(person.lname); // Outputs "Das"
+console.log(person.age);   // Outputs 21
+console.log(person.color); // Outputs "Blue"
 
 let bc;// without value the type of is undefined
-console.log(typeof(person));
-console.log(typeof(bc));
+console.log(typeof (person));
+console.log(typeof (bc));
+
+// function in javascript
+function func() {
+    console.log("this is a function");
+}
+func();
+
+// function with parameter
+function func(x, y) {
+    return x * y;
+}
+
+let fc = func(4, 5);
+console.log(fc);
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    introduce() {
+        return `Hi, I'm ${this.name}, and I'm ${this.age} years old.`;
+    }
+}
+let sumon = new Person("Sumon", 21);
+console.log(sumon.introduce());
