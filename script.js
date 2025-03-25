@@ -76,3 +76,41 @@ let y1 = 123e5;
 let y2 = 123e-5;
 console.log(y1);
 console.log(y2);
+
+//javascript bigint
+let bigInt = BigInt("2548728439725959345");
+console.log(bigInt);
+//console.log(bigInt.toString());
+
+// boolean in javascript
+let isTrue = true;
+let isFalse = false;
+
+console.log(isFalse);
+console.log(isTrue);
+
+// array in javascript
+
+let array = ["volvo","BMW","Toyota"];
+array[1] = "Ferary";
+for(i in array){
+    console.log(array[i]);
+}
+
+// object in javascript 
+
+let person = {
+    fname: "sumon",
+    lname: "Das",
+    age: 21,
+    color: "Blue" // Ensure the 'color' property is defined correctly
+  };
+  
+  console.log(person.fname); // Outputs "sumon"
+  console.log(person.lname); // Outputs "Das"
+  console.log(person.age);   // Outputs 21
+  console.log(person.color); // Outputs "Blue"
+
+let bc;// without value the type of is undefined
+console.log(typeof(person));
+console.log(typeof(bc));
