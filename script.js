@@ -33,15 +33,9 @@ if (x != y) {
     console.log("X is equal y");
 }
 
-// if(xx && yy){
-//     console.log("logic is true");
-// }else{
-//     console.log("logic is false");
-// }
-
-// for(let i = 0;i<=10;i++){
-//     console.log("The number is "+(i-1));
-// }
+for(let i = 0;i<=10;i++){
+    console.log("The number is "+(i-1));
+}
 
 {
     let x = 5;
@@ -164,8 +158,8 @@ let student = {
     fname: "sumon",
     lname: "Das",
     id: 2202014,
-    fullName: function(){
-        return "Student name is "+ this.fname + " " + this.lname;
+    fullName: function () {
+        return "Student name is " + this.fname + " " + this.lname;
     }
 }
 console.log(student.fname);
@@ -181,10 +175,10 @@ delete student.id;
 myObject = {
     name: "Jhon",
     age: 30,
-    myCar:{
-        car1:"Ford",
-        car2:"BMW",
-        car3:"Fiat"
+    myCar: {
+        car1: "Ford",
+        car2: "BMW",
+        car3: "Fiat"
     }
 }
 console.log("nested object here");
@@ -194,3 +188,40 @@ console.log(myObject.myCar.car1);
 console.log(myObject.myCar.car2);
 console.log(myObject.myCar.car3);
 
+
+// another way to call nested object
+let nestedObj = myObject['myCar']['car1'];
+console.log("another way to call nested object " + nestedObj);
+
+
+// object method in javascript
+const person1 = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+console.log(person1.fullName());
+
+
+// object display in java script
+
+let s ={
+    name: "John",
+    age: 30,
+    city:"New Work"
+};
+
+document.getElementById("demo").innerHTML = s.city;
+document.getElementById("demo1").innerHTML ="Name is "+s.name+" person age is "+s.age+" and city is "+s.city;
+
+
+// use for loop in a object to interate all value of the object
+var t = " ";
+for( i in s){
+    t+=s[i]+" ";
+}
+document.getElementById("demo2").innerHTML = t;
