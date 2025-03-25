@@ -140,3 +140,37 @@ class Person {
 }
 let sumon = new Person("Sumon", 21);
 console.log(sumon.introduce());
+
+
+// creating object with new Object keyword
+
+let car = new Object();
+
+car.brand = "volvo";
+car.year = 2025;
+car.color = "blue";
+
+
+console.log(car.brand);
+console.log(car.year);
+console.log(car.color);
+car.brand = "BMW";
+console.log(car['brand']);
+
+
+// object function in javascript
+
+let student = {
+    fname: "sumon",
+    lname: "Das",
+    id: 2202014,
+    fullName: function(){
+        return "Student name is "+ this.fname + " " + this.lname;
+    }
+}
+console.log(student.fname);
+console.log(student.lname);
+console.log(student.id);
+let call = student.fullName();
+console.log(call);
+
