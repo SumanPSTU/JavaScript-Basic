@@ -341,3 +341,47 @@ const cars = [
 for(x in cars){
     console.log(cars[x]);
 }
+
+const carss = new Array("Saab", "Volvo", "BMW");
+console.log(carss);
+for(i in carss){
+    console.log(carss[i]);
+}
+carss.push("volvo");
+console.log(carss.length);
+
+
+// setInterval(() => {
+//     let date = new Date();
+//     document.getElementById("demo3").innerHTML =date.getHours()+":"+date.getMinutes() +":"+ date.getSeconds()+" "+date.getMonth();
+// }, 1000);
+
+// for loop in javascript
+for (let num = 0;num<carss.length;num++){
+    console.log(carss[num]);
+}
+
+for(c of carss){
+    console.log(" of loop "+c);
+}
+
+
+for(c in carss){
+    console.log(" in loop "+c);
+}
+
+
+// while loop in javascript
+
+let nums = 0;
+while(nums < 10){
+    console.log("while loop "+(nums+1));
+    nums++;
+}
+
+
+// set in javascript 
+const letter =  new Set(['a','b','c','d']);
+for(const x of letter){
+    console.log(x);
+}
