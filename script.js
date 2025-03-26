@@ -274,9 +274,9 @@ console.log(string1.charAt(2));
 console.log(string2.charCodeAt(2));
 console.log(string1.at(10));
 console.log(string1[8]);
-console.log(string1.slice(10,16));
-console.log(string1.substring(3,8));
-console.log(string1.substr(-6,6));
+console.log(string1.slice(10, 16));
+console.log(string1.substring(3, 8));
+console.log(string1.substr(-6, 6));
 
 console.log(string1.toUpperCase());
 console.log(string1.toLowerCase());
@@ -285,18 +285,18 @@ console.log(string1.trim());
 console.log(string2.trimStart());
 console.log(string1.trimEnd());
 let str = "7";
-console.log(str.padStart(4,"p"));
-console.log(str.padEnd(4,"0"));
+console.log(str.padStart(4, "p"));
+console.log(str.padEnd(4, "0"));
 
 let stringr = "Hello world!";
 console.log(stringr.repeat(3));
-console.log(stringr.replace("world!","Bangladesh"));
+console.log(stringr.replace("world!", "Bangladesh"));
 
 let teststr = " this is a new string";
-console.log(teststr.replaceAll(" ","space"));
+console.log(teststr.replaceAll(" ", "space"));
 console.log(teststr.split(" "));
 let splitarr = teststr.split(" ");
-for (i in splitarr){
+for (i in splitarr) {
     console.log(splitarr[i]);
 }
 
@@ -321,8 +321,23 @@ console.log(texttt);
 let num = 9873.8734;
 console.log(num);
 let numStr = num.toString();
-console.log(typeof(numStr));
+console.log(typeof (numStr));
 console.log(num.toExponential(3));
 console.log(num.toFixed(3));
 console.log(num.toPrecision(2));
 console.log(Number(numStr));
+
+console.log(parseInt(numStr));
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_VALUE);
+
+
+// array in javascript
+const cars = [
+    "Saab",
+    "Volvo",
+    "BMW"
+];
+for(x in cars){
+    console.log(cars[x]);
+}
