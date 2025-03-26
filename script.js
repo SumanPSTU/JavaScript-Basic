@@ -236,7 +236,7 @@ document.getElementById("demo3").innerHTML = myArray;
 function teacher(fname, lname, id, age) {
     this.fname = fname;
     this.lname = lname,
-    this.id = id;
+        this.id = id;
     this.age = age;
 
     this.fullName = function () {
@@ -245,9 +245,60 @@ function teacher(fname, lname, id, age) {
 }
 
 // this is how to create object using constractor
-const teacherObj = new teacher("sumon","das",2202014,21);
-let teacherObj2 = new teacher("Jhon","Doe",23244,32);
+const teacherObj = new teacher("sumon", "das", 2202014, 21);
+let teacherObj2 = new teacher("Jhon", "Doe", 23244, 32);
 console.log(teacherObj2);
 console.log(teacherObj.fullName());
 console.log(teacherObj2.fullName());
+
+function hello() {
+    document.getElementById("demo3").innerHTML = "Hello";
+}
+
+// javascript string
+
+let string1 = "This is a string of javascript ";// double quote
+let string2 = '  This is a string of javascript'; // single quote
+let string3 = `Thi's i's a string of javascript`; // template string
+console.log(string1);
+console.log(string2);
+console.log(string3);
+
+//print length of string
+console.log(string1.length);
+
+//string method of javascript
+
+console.log(string1.length);
+console.log(string1.charAt(2));
+console.log(string2.charCodeAt(2));
+console.log(string1.at(10));
+console.log(string1[8]);
+console.log(string1.slice(10,16));
+console.log(string1.substring(3,8));
+console.log(string1.substr(-6,6));
+
+console.log(string1.toUpperCase());
+console.log(string1.toLowerCase());
+console.log(string1.concat(string2));
+console.log(string1.trim());
+console.log(string2.trimStart());
+console.log(string1.trimEnd());
+let str = "7";
+console.log(str.padStart(4,"p"));
+console.log(str.padEnd(4,"0"));
+
+let stringr = "Hello world!";
+console.log(stringr.repeat(3));
+console.log(stringr.replace("world!","Bangladesh"));
+
+let teststr = " this is a new string";
+console.log(teststr.replaceAll(" ","space"));
+console.log(teststr.split(" "));
+let splitarr = teststr.split(" ");
+for (i in splitarr){
+    console.log(splitarr[i]);
+}
+
+
 
