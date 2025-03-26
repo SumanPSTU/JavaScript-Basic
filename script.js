@@ -338,13 +338,13 @@ const cars = [
     "Volvo",
     "BMW"
 ];
-for(x in cars){
+for (x in cars) {
     console.log(cars[x]);
 }
 
 const carss = new Array("Saab", "Volvo", "BMW");
 console.log(carss);
-for(i in carss){
+for (i in carss) {
     console.log(carss[i]);
 }
 carss.push("volvo");
@@ -357,31 +357,57 @@ console.log(carss.length);
 // }, 1000);
 
 // for loop in javascript
-for (let num = 0;num<carss.length;num++){
+for (let num = 0; num < carss.length; num++) {
     console.log(carss[num]);
 }
 
-for(c of carss){
-    console.log(" of loop "+c);
+for (c of carss) {
+    console.log(" of loop " + c);
 }
 
 
-for(c in carss){
-    console.log(" in loop "+c);
+for (c in carss) {
+    console.log(" in loop " + c);
 }
 
 
 // while loop in javascript
 
 let nums = 0;
-while(nums < 10){
-    console.log("while loop "+(nums+1));
+while (nums < 10) {
+    console.log("while loop " + (nums + 1));
     nums++;
 }
 
 
 // set in javascript 
-const letter =  new Set(['a','b','c','d']);
-for(const x of letter){
+const letter = new Set(['a', 'b', 'c', 'd']);
+letter.add('f');
+console.log(letter);
+letter.delete('a');
+
+console.log(letter.has('b'));
+
+for (const x of letter) {
     console.log(x);
+}
+letter.forEach(function(value){
+    console.log(value);
+});
+for(const le of letter.values()){
+    console.log(le);
+}
+
+// map in javascript
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+
+for(const i of fruits){
+
+}
+for (const [key, value] of fruits) {
+    console.log(key + " " + value);
 }
