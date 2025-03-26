@@ -1,3 +1,5 @@
+import obj,{mod,funct} from "./modulo.js";
+
 let x = "string";
 let y = "star";
 if (x > y) {
@@ -87,8 +89,8 @@ console.log(isTrue);
 
 let array = ["volvo", "BMW", "Toyota"];
 array[1] = "Ferary";
-for (i in array) {
-    console.log(array[i]);
+for (let ii in array) {
+    console.log(array[ii]);
 }
 
 // object in javascript 
@@ -116,11 +118,11 @@ function func() {
 func();
 
 // function with parameter
-function func(x, y) {
+function funcs(x, y) {
     return x * y;
 }
 
-let fc = func(4, 5);
+let fc = funcs(4, 5);
 console.log(fc);
 
 class Person {
@@ -172,7 +174,7 @@ console.log(call);
 delete student.id;
 
 // java script support nested object
-myObject = {
+let  myObject = {
     name: "Jhon",
     age: 30,
     myCar: {
@@ -221,7 +223,7 @@ document.getElementById("demo1").innerHTML = "Name is " + s.name + " person age 
 
 // use for loop in a object to interate all value of the object
 var t = " ";
-for (i in s) {
+for (let i in s) {
     t += s[i] + " ";
 }
 document.getElementById("demo2").innerHTML = t;
@@ -296,7 +298,7 @@ let teststr = " this is a new string";
 console.log(teststr.replaceAll(" ", "space"));
 console.log(teststr.split(" "));
 let splitarr = teststr.split(" ");
-for (i in splitarr) {
+for (let i in splitarr) {
     console.log(splitarr[i]);
 }
 
@@ -344,7 +346,7 @@ for (x in cars) {
 
 const carss = new Array("Saab", "Volvo", "BMW");
 console.log(carss);
-for (i in carss) {
+for (let i in carss) {
     console.log(carss[i]);
 }
 carss.push("volvo");
@@ -404,10 +406,81 @@ const fruits = new Map([
     ["bananas", 300],
     ["oranges", 200]
 ]);
+fruits.set("lichi", 200);
 
-for(const i of fruits){
-
+for(const i of fruits.keys()){
+    console.log(i);
 }
 for (const [key, value] of fruits) {
     console.log(key + " " + value);
 }
+
+//type conersion in javascript
+let ttof = Number("30293");
+console.log(typeof(ttof));
+
+//regular expression in java script
+
+let stringtext = "w3school here";
+let regex = "here";
+console.log(stringtext.search(regex));
+
+// try catch in javascript
+
+try{
+    addlert("hwllo ");
+}catch(err){
+    //throw "this is a err";  
+    console.log(err);
+}finally{
+    console.log("this is finally");
+}
+
+// arrow function in javascript
+
+let mu = (a,b)=>{
+    return a+b;
+}
+let textfun =()=>{
+    console.log("hello arrow function");
+}
+textfun();
+console.log(mu(3,4));
+
+
+// class in javascrrpt
+
+class Holywood{
+    constructor(name,year){
+        this.name = name;
+        this.year  = year;
+
+    }
+    print(){
+        return "the name is "+this.name+" and the year is "+this.year;
+    }
+}
+
+
+class Bolywood extends Holywood{
+    constructor(name,year){
+        super(name,year);
+
+    }
+    print(){
+        console.log(super.print());
+    }
+
+
+}
+
+const myFunc = new Holywood("holywood",1999);
+console.log(myFunc.print());
+
+// call import variable in javascript
+
+console.log(mod);
+console.log(obj.name);
+console.log(obj.age);
+
+funct();
