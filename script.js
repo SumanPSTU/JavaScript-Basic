@@ -33,8 +33,8 @@ if (x != y) {
     console.log("X is equal y");
 }
 
-for(let i = 0;i<=10;i++){
-    console.log("The number is "+(i-1));
+for (let i = 0; i <= 10; i++) {
+    console.log("The number is " + (i - 1));
 }
 
 {
@@ -209,19 +209,45 @@ console.log(person1.fullName());
 
 // object display in java script
 
-let s ={
+let s = {
     name: "John",
     age: 30,
-    city:"New Work"
+    city: "New Work"
 };
 
 document.getElementById("demo").innerHTML = s.city;
-document.getElementById("demo1").innerHTML ="Name is "+s.name+" person age is "+s.age+" and city is "+s.city;
+document.getElementById("demo1").innerHTML = "Name is " + s.name + " person age is " + s.age + " and city is " + s.city;
 
 
 // use for loop in a object to interate all value of the object
 var t = " ";
-for( i in s){
-    t+=s[i]+" ";
+for (i in s) {
+    t += s[i] + " ";
 }
 document.getElementById("demo2").innerHTML = t;
+
+// also can Iterate by creating object values method and insert into array
+const myArray = Object.values(s);
+document.getElementById("demo3").innerHTML = myArray;
+
+
+// javascript constractor here
+
+function teacher(fname, lname, id, age) {
+    this.fname = fname;
+    this.lname = lname,
+    this.id = id;
+    this.age = age;
+
+    this.fullName = function () {
+        return "Name is " + this.fname + " " + this.lname;
+    }
+}
+
+// this is how to create object using constractor
+const teacherObj = new teacher("sumon","das",2202014,21);
+let teacherObj2 = new teacher("Jhon","Doe",23244,32);
+console.log(teacherObj2);
+console.log(teacherObj.fullName());
+console.log(teacherObj2.fullName());
+
