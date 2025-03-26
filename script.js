@@ -300,5 +300,29 @@ for (i in splitarr){
     console.log(splitarr[i]);
 }
 
+// string search method of javascript
 
+let searchstr = "Hello world!";
+console.log(searchstr.search("world"));
+console.log(searchstr.indexOf("llo"));
+console.log(searchstr.lastIndexOf("l"));
 
+//console.log(searchstr.match("world"));
+console.log(searchstr.startsWith("Hello"));
+
+let firstName = "John";
+let lastName = "Doe";
+
+let texttt = `Welcome ${firstName}, ${lastName}!`;
+console.log(texttt);
+
+// number method in javascript
+
+let num = 9873.8734;
+console.log(num);
+let numStr = num.toString();
+console.log(typeof(numStr));
+console.log(num.toExponential(3));
+console.log(num.toFixed(3));
+console.log(num.toPrecision(2));
+console.log(Number(numStr));
